@@ -17,26 +17,19 @@ def closest(lst, K):
 
 
 cl_num = closest(prim_num, even_input)
+print(cl_num)
 
 if len(prim_num) >= 8:
     num = prim_num.index(cl_num)
     if even_input == 8:
         print(prim_num[num - 3: num + 5])
     elif even_input == 6:
-        i = prim_num.index(cl_num)
-        total = prim_num[i - 2: i + 6]
-        print(total)
+        print(prim_num[num - 2: num + 6])
     elif even_input == 4:
-        i = prim_num.index(cl_num)
-        total = prim_num[i - 1: i + 7]
-        print(total)
+        print(prim_num[num - 1: num + 7])
     elif even_input == 2:
-        i = prim_num.index(cl_num)
-        total = prim_num[i : i + 8]
-        print(total)
+        print(prim_num[num : num + 8])
     else:
-        num = prim_num.index(cl_num)
-        total = prim_num[num - 4:num + 4]
-        print(total)
+        print(prim_num[num - 4: num + 4])
 else:
     print('enter a valid even number')
